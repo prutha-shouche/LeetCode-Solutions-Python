@@ -1,0 +1,17 @@
+# Write your MySQL query statement below
+
+2 Solutions :
+
+#Nested Query:
+SELECT name AS Customers FROM Customers 
+WHERE id NOT IN ( SELECT customerId FROM orders );
+
+
+#Left Join
+SELECT c.name AS Customers 
+FROM Customers c LEFT JOIN Orders o
+ON c.id=o.CustomerId
+WHERE o.id is NULL;
+
+
+
