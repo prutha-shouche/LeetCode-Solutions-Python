@@ -1,0 +1,16 @@
+# Please write a DELETE statement and DO NOT write a SELECT statement.
+# Write your MySQL query statement below
+
+# See https://www.mysqltutorial.org/mysql-delete-join/
+
+DELETE tb1
+FROM Person tb1
+JOIN Person tb2 ON tb1.email = tb2.email
+WHERE tb1.id > tb2.id
+
+
+#Alternate solution
+delete p1 from person p1 inner join person p2 on p1.email = p2.email where p1.id > p2.id
+
+
+
