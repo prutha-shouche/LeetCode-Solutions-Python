@@ -12,7 +12,8 @@ order by id;
 Explaination:
 So here I am just trying to select:-
 
-All points where there is no parent as 'Root'
-Points whose id is not there in the parent id column, which means they are not parent to any other point as 'Leaf'
-Rest of the points must be 'Inner'
+    1.All points where there is no parent as 'Root'
+    2.Points whose id is not there in the parent id column, which means they are not parent to any other point as 'Leaf'
+    3.Rest of the points must be 'Inner'
+    
 Since all the inputs are valid trees, not having any other conditions
