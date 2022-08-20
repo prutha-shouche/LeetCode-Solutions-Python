@@ -8,18 +8,29 @@ Created on Sat Jun  4 03:06:14 2022
 
 class Solution:
     def sortByBits(self, arr: List[int]) -> List[int]:
-        arr.sort()
-        d={}
-        for i in arr:
-            count=bin(i).count('1')
-            if count not in d:
-                d[count]=[i]
-            else:
-                d[count].append(i)
-        res=[]
-        for i in sorted(d.keys()):
-            res.extend(d[i])
-        return res
+        #Approach 1
+        ans=[]
+        for num in arr:
+            count=bin(num).count('1')
+            ans.append([count,num])
+        ans.sort()
+        arr=[num for count,num in ans]
+        return arr
+    
+    
+# Approach -2    
+#         arr.sort()
+#         d={}
+#         for i in arr:
+#             count=bin(i).count('1')
+#             if count not in d:
+#                 d[count]=[i]
+#             else:
+#                 d[count].append(i)
+#         res=[]
+#         for i in sorted(d.keys()):
+#             res.extend(d[i])
+#         return res
         
         
             
